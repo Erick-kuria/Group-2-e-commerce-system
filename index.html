@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: rgb(206, 198, 152);
+           
+        }
+        #home {
+            text-align: center;
+            padding:50px;
+            background: url('background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+    
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        #products, #about, #contact {
+            display: none;
+        }
+        
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 200px;
+            float: left;
+            background:rgb(177, 169, 144);
+        }
+        
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 200px;
+            padding: 5px;
+        }
+
+        .search-bar button {
+            padding: 5px;
+            margin-left: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0);" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('products')">Products</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('about')">About</a></li>
+                <li><a href="javascript:void(0);" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to Our Store</h1>
+        </section>
+        <section id="products">
+            <div class="search-bar">
+                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Search for products...">
+                <button onclick="searchProducts()">Search</button>
+            </div>
+            <div id="product-list">
+                <!-- Product items will be dynamically added here -->
+            </div>
+        </section>
+        <section id="about">
+            <h1>About Us</h1>
+            <p><b>Welcome to Heavenly collection! </b></p>
+            <br>
+            <p>At Heavenly collection, we believe that fashion is more than just clothing—it's a way to express your unique style and personality. Our mission is to provide a curated selection of high-quality clothing and accessories that cater to every taste and occasion, ensuring that you look and feel your best, no matter where life takes you.</p>
+            <br>
+            <p><b>Our story</b></p>
+            <br>
+            <p>Founded in 2022,Heavenly collection began as a vision to revolutionize the online shopping experience. What started as a small boutique has grown into a leading destination for fashion enthusiasts around the world. Our team is passionate about discovering the latest trends, sourcing the finest fabrics, and delivering exceptional customer service.</p> 
+            <br>
+            <p><b>What we offer</b></p>
+            <br>
+            <p>We take pride in offering a diverse range of apparel, from timeless classics to the latest trends. Whether you're searching for casual wear, office attire, or something for a special occasion, we have something to suit every style and preference. Our collections are carefully curated to ensure that each piece meets our high standards of quality and design.</p> 
+            <br>
+            <p><b>Our commitment</b></p>
+            <br>
+            <p>we are committed to sustainability and ethical practices. We work closely with our suppliers to ensure that our products are made with respect for both people and the planet. Our goal is to offer fashion that you can feel good about.</p>
+            <br>
+            <p><b>Join our community</b></p>
+            <br>
+            <p>We invite you to explore our collections and discover why Heavenly collection is the go-to destination for fashion-forward individuals. Follow us on twitter,facebook and instagrem to stay updated on the latest arrivals, exclusive offers, and style inspiration.</p>
+            <br>
+        <p>Thank you for choosing Heavenly collections. We look forward to being a part of your fashion journey!</p>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Address:kimathi street pionner biulding first floor </p>
+                <p><i class="fas fa-phone-alt"></i> Phone: (254)74567890</p>
+                <p><i class="fas fa-envelope"></i> Email: contact@heavenlycollection.com</p>
+                <p><i class="fas fa-clock"></i> Hours: Mon-Fri 9:00 AM - 6:00 PM</p>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Store</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
